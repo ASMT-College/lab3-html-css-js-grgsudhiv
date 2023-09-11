@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <script>
+        var myCars = [
+        {
+            name : "Maruti",
+            company : "Suzuki"
+        },
+        {
+            name : "Abc",
+            company : "Xyz"
+        },
+        {
+            name : "Urus",
+            company : "Lamborghini"
+        }
+        ]
+
+        var myTable = <table>
+            <tr>
+                <td id="name"></td>
+                <td id="company"></td>
+            </tr>
+        </table> ;
+
+        for(let i=0; i<myCars.length; i++){
+            document.getElementById("name").innerHTML = 
+            console.log(myCars[i]);
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- 
+    Assignment :
+    I'm learning js using loop
+    
+    for(let i=0; i<1000; i++){
+        console.log(`I'm learning Js.`);
+    }
+-->

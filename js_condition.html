@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional js</title>
+</head>
+<body>
+    <script>
+        var todayDate = new Date();
+        var hour = todayDate.getHours();
+        if(hour<12){
+            alert("Good Morning ......");
+        }else if(hour == 12){
+            alert("Good noon");
+        }else if(hour>12 && hour<18){
+            alert("Good Afternoon");
+        }else{
+            alert("Good Evening");
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+

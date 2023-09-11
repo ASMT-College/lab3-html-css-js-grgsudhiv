@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+</head>
+<body>
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="dynamicCtable"></div>
+    <script>
+        var myCars = [
+        {
+            name : "Maruti",
+            company : "Suzuki"
+        },
+        {
+            name : "Abc",
+            company : "Xyz"
+        },
+        {
+            name : "Urus",
+            company : "Lamborghini"
+        }
+        ]
+
+        function generateTable(){
+            var myTable = `
+                <table>
+                <tr>
+                    <td>Name</td>
+                    <td>Company</td>
+                </tr>
+            `
+            myCars.forEach(element => {
+                myTable = myTable + `
+                    <tr>
+                        <td>${element.name}</td>
+                        <td>${element.company}</td>
+                    </tr>
+                    `;
+            });
+            myTable += "</table>";
+            document.getElementById("dynamicCtable").innerHTML = myTable;
+        } 
+    </script>
+</body>
+</html>
