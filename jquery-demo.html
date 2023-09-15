@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        //it makes html elements run first
+        $(document).ready(function(){   
+            $('#div1').hide();
+            $('#div1').click(function(){
+                alert("hi this event is defined from jquery.");
+            });
+
+            $('#sh').dblclick(function(){
+               alert("Using double click");
+            });
+
+            $('#div1').on("mouseenter",function(){
+                $("body").css("background-color","green");
+            });
+
+            $('#div1').on("mouseleave",function(){
+                $("body").css("background-color","white");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">hello js</div>
+    <div onclick="$('#div1').show()" id="sh">Show</div>
+    <div onclick="hideDisplay()">Hide</div>
+    <script>
+        function hideDisplay(){
+            $('#div1').hide();
+        }        
+    </script>
+</body>
+</html>

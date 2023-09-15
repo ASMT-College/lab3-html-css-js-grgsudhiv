@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // create direct instance of object
+        var Ram = {
+            name : "Ram",
+            age : 21,
+            address : "Sitapaila"
+        }
+        document.write("Name is : " + Ram.name + "<br>");
+
+        // create an object constructor
+
+        function person(n, a, ad){
+            this.name = n;
+            this.age = a;
+            this.address = ad; 
+            this.showDetail = showName;
+        }
+
+        function showName(){
+            document.write(this.name + " whose age is " + this.age + " lives in " + this.address + "<br>");
+        }
+
+        var ram = new person("Ram", 55, "ktm");
+        var suraj = new person("Suraj", 82, "Thamel");
+        ram.showDetail();
+        suraj.showDetail();
+
+
+
+        function circle(r){
+            this.radius = r;
+            this.showArea = area; 
+        }
+
+        function area(){
+            document.write(Math.PI*this.radius*this.radius);
+        }
+        var myCircle = new circle(5);
+        myCircle.showArea();
+
+        
+    </script>
+</body>
+</html> 
+
+<!-- 
+    Create class/object named circle
+    with property radius and method to
+    show its area.
+ -->

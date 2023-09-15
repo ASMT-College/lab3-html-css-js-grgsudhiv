@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="dynamic_table"></div>
+    <div id="hide" onclick="hideTable()">Hide</div>
+    <div id="show" onclick="ShowTable()">Show</div>
+    <div onmouseover="ChangeTableColour()">Change Colour</div>
+    <div onmouseover="ResetTableColour()">Reset Colour</div>
+
+    <script>
+      var myDivision = document.getElementById("dynamic_table");
+      var myTable = document.createElement("table");
+      myDivision.style.display = "none";
+
+      var headingRow = document.createElement("tr");
+      var headingColumn1 = document.createElement("td");
+      var headingColumn2 = document.createElement("td");
+      var headingColumn3 = document.createElement("td");
+
+      var row2 = document.createElement("tr");
+      var row2Col1 = document.createElement("td");
+      var row2Col2 = document.createElement("td");
+      var row2Col3 = document.createElement("td");
+
+      var row3 = document.createElement("tr");
+      var row3Col1 = document.createElement("td");
+      var row3Col2 = document.createElement("td");
+      var row3Col3 = document.createElement("td");
+
+      row2Col1.innerHTML = "John";
+      row2Col2.innerHTML = "20";
+      row2Col3.innerHTML = "john@gmail.com";
+
+      row3Col1.innerHTML = "Jack";
+      row3Col2.innerHTML = "15";
+      row3Col3.innerHTML = "jack@gmail.com";
+
+      headingColumn1.innerHTML = "Name";
+      headingColumn2.innerHTML = "Age";
+      headingColumn3.innerHTML = "Email";
+
+      headingRow.appendChild(headingColumn1);
+      headingRow.appendChild(headingColumn2);
+      headingRow.appendChild(headingColumn3);
+
+      row2.appendChild(row2Col1);
+      row2.appendChild(row2Col2);
+      row2.appendChild(row2Col3);
+
+      row3.appendChild(row3Col1);
+      row3.appendChild(row3Col2);
+      row3.appendChild(row3Col3);
+
+      myTable.appendChild(headingRow);
+
+      myTable.appendChild(row2);
+      myTable.appendChild(row3);
+
+      myDivision.appendChild(myTable);
+
+      myHeadingColumn1.addEventListener("click", sayHI);
+      // myHeadingColumn2.addEventListener('dblclick',sayHI)
+      myHeadingColumn2.setAttribute("ondblclick", "sayAge()");
+
+      function sayHI() {
+        alert("namastey");
+      }
+
+      function sayAge() {
+        alert("Age");
+      }
+      function sayAge() {
+        alert("Age");
+      }
+      function hideTable() {
+        var myDiv = document.getElementById("dynamic_table");
+        myDiv.style.display = "none";
+      }
+      function ShowTable() {
+        var myDiv = document.getElementById("dynamic_table");
+        myDiv.style.display = "block";
+      }
+      function ChangeTableColour() {
+        var myDiv = document.getElementById("dynamic_table");
+        myDiv.style.backgroundColor = "grey";
+      }
+      function ResetTableColour() {
+        var myDiv = document.getElementById("dynamic_table");
+        myDiv.style.backgroundColor = "white";
+      }
+
+      // ----------------------12 september Assignment-------------------------//
+      //  create dynamic table when table data is provided
+      //  name:john
+      // age:20
+      //  email:abc@hotmail.com
+      // name:jeck
+      // age:50
+      // email:def@hotmail.com
+      /*write the methods properties and events of form object */
+      
+    </script>
+  </body>
+</html>
